@@ -24,31 +24,32 @@ def price():
     driver.get("https://hotmilhas.com.br/")
 
     try:
-        time.sleep(5)
-        insert_email = driver.find_element_by_xpath(mail).send_keys("wesley.teles@gmail.com")
+        insert_email = driver.find_element(by=By.XPATH, value=mail).send_keys("wesley.teles@gmail.com")
         print("E-mail Colocado com Sucesso!")
         time.sleep(5)
 
-        insert_opt_program = driver.find_element_by_xpath(select_program_milhas)
+        insert_opt_program = driver.find_element(by=By.XPATH, value=select_program_milhas)
         insert_opt_program.click()
         print("Opções do Programa Selecionado!")
-    
-        insert_select_smiles = driver.find_element_by_xpath(select_type_smiles)
+
+
+        insert_select_smiles = driver.find_element(by=By.XPATH, value=select_type_smiles)
         insert_select_smiles.click()
         print("Smiles Selecionado!")
+        time.sleep(5)
 
-        insert_options_qtd = driver.find_element_by_xpath(options_qtd_milhas)
+        insert_options_qtd = driver.find_element(by=By.XPATH, value=options_qtd_milhas)
         insert_options_qtd.click()
         print("Opções de Quantidade Selecionada!")
 
-        insert_select_qtd_select = driver.find_element_by_xpath(select_qtd_milhas)
+
+        insert_select_qtd_select = driver.find_element(by=By.XPATH, value=select_qtd_milhas)
         insert_select_qtd_select.click()
         print("100mil Milhas Selecionada!")
 
-        insert_btn_cotar = driver.find_element_by_xpath(btn_cotar)
+
+        insert_btn_cotar = driver.find_element(by=By.XPATH, value=btn_cotar)
         insert_btn_cotar.click()
-        print(" ")
-        print("Cotação Realizada com Sucesso!")
     except:
         print("Nao foi possivel realizar Sua Cotação!")
     
