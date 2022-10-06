@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
+
 
 mail = '//*[@id="quotation-form"]/div[1]/div[1]/input'
 select_program_milhas = '//*[@id="quotation-form"]/div[1]/div[2]/div'
@@ -20,9 +20,7 @@ def price():
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--no-sandbox")
-    driver = webdriver.Chrome(ChromeDriverManager().install())
-    #driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
-    wait = WebDriverWait(driver, 10)
+    driver = webdriver.Chrome(os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
     driver.get("https://hotmilhas.com.br/")
 
     try:
