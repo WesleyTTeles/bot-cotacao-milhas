@@ -24,7 +24,7 @@ def price():
     driver.get("https://hotmilhas.com.br/")
 
     try:
-        
+        time.sleep(5)
         insert_email = driver.find_element_by_xpath(mail).send_keys("wesley.teles@gmail.com")
         print("E-mail Colocado com Sucesso!")
         time.sleep(5)
@@ -32,7 +32,7 @@ def price():
         insert_opt_program = driver.find_element_by_xpath(select_program_milhas)
         insert_opt_program.click()
         print("Opções do Programa Selecionado!")
-
+    
         insert_select_smiles = driver.find_element_by_xpath(select_type_smiles)
         insert_select_smiles.click()
         print("Smiles Selecionado!")
