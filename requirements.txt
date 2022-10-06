@@ -1,4 +1,3 @@
-selenium==4.1.3
-urllib3==1.25.10
+selenium
 schedule==1.1.0
 chromedriver-autoinstaller
