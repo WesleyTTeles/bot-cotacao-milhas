@@ -1,5 +1,6 @@
 import time
 import os
+import schedule
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -55,22 +56,16 @@ def price():
     
     driver.close()
     
-price()
 
-# # Tipos de Agendamentos
-# # schedule.every(3).seconds.do(price)
-# schedule.every(1).minutes.do(price)
-# # schedule.every(5).hour.do(price)
-# # schedule.every().day.at("21:35").do(price)
-# # schedule.every(3).to(10).do(price)
-# # schedule.every(3).monday.do(price)
-# # schedule.every(3).wednesday.at("10:00").do(price)
+# Tipos de Agendamentos
+# schedule.every(3).seconds.do(price)
+schedule.every(1).minutes.do(price)
+# schedule.every(5).hour.do(price)
 
-# while True:
-#     schedule.run_pending()
-#     print("Bot Trabalhando...")
-#     print(" ")
-#     time.sleep(5)
+while True:
+    schedule.run_pending()
+    print("Bot Trabalhando...")
+    time.sleep(1)
 
 
 
