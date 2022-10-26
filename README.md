@@ -1,6 +1,6 @@
 <h1>Bot Para Realizar cotação na Hotmilhas</h1>
 
-<h2>Esse bot tem como objestivo automatizar a cotação no site da hotmilhas</h2>
+<h2>Esse bot tem como objetivo automatizar a cotação no site da hotmilhas</h2>
 
 <span>Como Utilizar:</span>
 
